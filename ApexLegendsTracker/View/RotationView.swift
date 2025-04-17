@@ -13,7 +13,9 @@ struct RotationView: View {
     var body: some View {
         VStack {
             Text("지금 맵 뭐야")
-            Text(viewModel.currentMap)
+            Text(viewModel.currentPubsMap)
+            Text(viewModel.currentRankedMap)
+            Text(viewModel.currentLtmMap)
         }
         .onAppear {
             viewModel.fetchRotation()

@@ -10,13 +10,18 @@ import Observation
 
 @Observable
 final class RotationViewModel {
-    var currentMap: String = "loading..."
+    var currentPubsMap: String = "loading..."
+    var currentRankedMap: String = "loading..."
+    var currentLtmMap: String = "loading..."
+    
     private let urlString: String = "https://api.mozambiquehe.re/maprotation?auth=2cce93eb972df7d78c8e42345037c9d3&version=2"
     
     func fetchRotation() {
         guard let url = URL(string: urlString) else {
             DispatchQueue.main.async {
-                self.currentMap = "URL 오류"
+                self.currentPubsMap = "URL 오류"
+                self.currentRankedMap = "URL 오류"
+                self.currentLtmMap = "URL 오류"
             }
             return
         }
@@ -27,14 +32,18 @@ final class RotationViewModel {
             if let error = error {
                 print("request error: ", error)
                 DispatchQueue.main.async {
-                    self.currentMap = "불러오기 실패"
+                    self.currentPubsMap = "불러오기 실패"
+                    self.currentRankedMap = "불러오기 실패"
+                    self.currentLtmMap = "불러오기 실패"
                 }
                 return
             }
             
             guard let data = data else {
                 DispatchQueue.main.async {
-                    self.currentMap = "데이터 없음"
+                    self.currentPubsMap = "데이터 없음"
+                    self.currentRankedMap = "데이터 없음"
+                    self.currentLtmMap = "데이터 없음"
                 }
                 return
             }
@@ -44,12 +53,16 @@ final class RotationViewModel {
                 let response = try decoder.decode(MapRotationResponse.self, from: data)
                 
                 DispatchQueue.main.sync {
-                    self.currentMap = response.current.map
+                    self.currentPubsMap = response.pubs.current.map
+                    self.currentRankedMap = response.ranked.current.map
+                    self.currentLtmMap = response.ltm.current.map
                 }
             } catch {
                 print("decode error: ", error)
                 DispatchQueue.main.async {
-                    self.currentMap = "불러오기 실패"
+                    self.currentPubsMap = "불러오기 실패"
+                    self.currentRankedMap = "불러오기 실패"
+                    self.currentLtmMap = "불러오기 실패"
                 }
             }
         }
