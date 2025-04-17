@@ -6,17 +6,24 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		97F5752A2DB1337F004C27FE /* ApexLegendsTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F575252DB1337F004C27FE /* ApexLegendsTrackerApp.swift */; };
+		97F5752B2DB1337F004C27FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F575272DB1337F004C27FE /* ContentView.swift */; };
+		97F5752C2DB1337F004C27FE /* MapRotationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F575282DB1337F004C27FE /* MapRotationResponse.swift */; };
+		97F5752D2DB1337F004C27FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97F575262DB1337F004C27FE /* Assets.xcassets */; };
+		97F575322DB13654004C27FE /* RotationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F575312DB13654004C27FE /* RotationViewModel.swift */; };
+		97F575342DB13662004C27FE /* RotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F575332DB13662004C27FE /* RotationView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		97F575122DB1275B004C27FE /* ApexLegendsTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApexLegendsTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		97F575252DB1337F004C27FE /* ApexLegendsTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApexLegendsTrackerApp.swift; sourceTree = "<group>"; };
+		97F575262DB1337F004C27FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		97F575272DB1337F004C27FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		97F575282DB1337F004C27FE /* MapRotationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRotationResponse.swift; sourceTree = "<group>"; };
+		97F575312DB13654004C27FE /* RotationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationViewModel.swift; sourceTree = "<group>"; };
+		97F575332DB13662004C27FE /* RotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		97F575142DB1275B004C27FE /* ApexLegendsTracker */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ApexLegendsTracker;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		97F5750F2DB1275B004C27FE /* Frameworks */ = {
@@ -32,7 +39,7 @@
 		97F575092DB1275B004C27FE = {
 			isa = PBXGroup;
 			children = (
-				97F575142DB1275B004C27FE /* ApexLegendsTracker */,
+				97F575292DB1337F004C27FE /* ApexLegendsTracker */,
 				97F575132DB1275B004C27FE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +50,43 @@
 				97F575122DB1275B004C27FE /* ApexLegendsTracker.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		97F575292DB1337F004C27FE /* ApexLegendsTracker */ = {
+			isa = PBXGroup;
+			children = (
+				97F575252DB1337F004C27FE /* ApexLegendsTrackerApp.swift */,
+				97F5752E2DB13387004C27FE /* Model */,
+				97F5752F2DB1338F004C27FE /* ViewModel */,
+				97F575302DB133A3004C27FE /* View */,
+				97F575262DB1337F004C27FE /* Assets.xcassets */,
+			);
+			path = ApexLegendsTracker;
+			sourceTree = "<group>";
+		};
+		97F5752E2DB13387004C27FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				97F575282DB1337F004C27FE /* MapRotationResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		97F5752F2DB1338F004C27FE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				97F575312DB13654004C27FE /* RotationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		97F575302DB133A3004C27FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				97F575272DB1337F004C27FE /* ContentView.swift */,
+				97F575332DB13662004C27FE /* RotationView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +103,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				97F575142DB1275B004C27FE /* ApexLegendsTracker */,
 			);
 			name = ApexLegendsTracker;
 			packageProductDependencies = (
@@ -109,6 +150,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97F5752D2DB1337F004C27FE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +161,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97F5752A2DB1337F004C27FE /* ApexLegendsTrackerApp.swift in Sources */,
+				97F5752B2DB1337F004C27FE /* ContentView.swift in Sources */,
+				97F575322DB13654004C27FE /* RotationViewModel.swift in Sources */,
+				97F5752C2DB1337F004C27FE /* MapRotationResponse.swift in Sources */,
+				97F575342DB13662004C27FE /* RotationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +298,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ApexLegendsTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = 92U58L5CU9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -280,7 +326,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ApexLegendsTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = 92U58L5CU9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

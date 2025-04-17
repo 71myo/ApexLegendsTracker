@@ -10,10 +10,8 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Text("지금 맵 뭐야")
-            Text("Kings Canyon")
+            Text("HomeView")
         }
-        .padding()
     }
 }
 

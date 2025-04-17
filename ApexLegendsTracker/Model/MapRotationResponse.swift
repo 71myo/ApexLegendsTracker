@@ -19,5 +19,12 @@ struct MapRotationResponse: Codable {
         let map: String
         let DurationInSecs: Int
         let DurationInMinutes: Int
+        let asset: String
+        
+        enum CodingKeys: String, CodingKey {
+            case start, end, map, DurationInSecs, DurationInMinutes, asset
+            case readableDateStart = "readableDate_start"
+            case readableDateEnd = "readableDate_end"
+        }
     }
 }
