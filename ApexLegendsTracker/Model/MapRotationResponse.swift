@@ -34,6 +34,11 @@ struct Rotation: Codable {
     let durationInSecs: Int
     let durationInMinutes: Int
     let asset: String
+    var assetUrl: URL? {
+        get {
+            URL(string: asset)
+        }
+    }
     
     // current에만 있는 필드
     let remainingSecs: Int?
